@@ -15,16 +15,16 @@
     <div class="wrapper">
         <h1>Submitted Info</h1>
         <div class = "info">
+            <p>Email:</p>
             <p>Name:</p>
-            <p>Dojo Location:</p>
-            <p>Favorite Language:</p>
-            <p>Comment:</p>
+            <p>Birthdate:</p>
+            <p>Password:</p>
         </div>
         <div class = "info">
-            <p>{{session['name']}}</p>
-            <p>{{session['location']}}</p>
-            <p>{{session['lang']}}</p>
-            <p>{{session['comment']}}</p>
+            <p>{{session['email']}}</p>
+            <p>{{session['f_name']+' '+session['l_name']}}</p>
+            <p>{{birthdate}}</p>
+            <p>{{password}}</p>
         </div>
     </div>
 </body>
