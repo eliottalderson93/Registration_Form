@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/my_script.js') }}">
+            // $(document).ready(function(){
+            //     $("").___();
+            // });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form class="survey" action="/submitted" method="post" id="survey">
+            <div class="line">
+                <p>Your Name:</p>
+                <input type="text" name="name">
+            </div>
+            <div class="line">
+                    <p>Location:</p>
+                <select name="location">Location
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="LA">LA</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="TC">TC</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Tulsa">Tulsa</option>
+                    <option value="East Bay">East Bay</option>
+                </select>
+            </div>
+            <div class="line">
+                <p>Favorite Language:</p>
+                <select name="coding_language">
+                    <option value="Python">Python</option>
+                    <option value="C">C</option>
+                    <option value="Javascript">JavaScript</option>
+                    <option value="R">R</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Mean">Mean</option>
+                    <option value="Java">Java</option>
+                    <option value="Flask">Flask</option>
+                </select>
+            </div>
+            <p>Comment (optional):</p>
+        </form>
+        <textarea form="survey" name="comment"></textarea>
+        <button type='submit' form="survey" value='create user'>Complete Survey</button>
+    </div>
+</body>
+
+</html>

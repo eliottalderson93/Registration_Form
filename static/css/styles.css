@@ -1,0 +1,42 @@
+/*This is a default CSS document*/
+*{
+    padding:0px;
+    margin:0px;
+    /* border:red dashed 1px; */
+}
+/*This is the start of the webpage*/
+.wrapper{
+    max-height:500px;
+    max-width:800px;
+    background-color:rgb(109, 48, 109);
+    padding:10px;
+}
+    /*Define the classes below*/
+    .survey{
+        /*pass*/
+    }
+    .line{
+        display:block;
+        width:400px;
+        height:50px;
+    }
+        .line select{
+            width:100px;
+            height:25px;
+        }
+        .line p{
+            display:inline;
+        }
+    textarea {
+        width:400px;
+        height:100px;
+    }
+    .info{
+        display:inline-block;
+        width:375px;
+        height:450px;
+    }
+        .info p{
+            width:200px;
+            height:50px;
+        }
